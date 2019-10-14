@@ -24,7 +24,12 @@ var merge = function(intervals) {
       results.push(currInterval);
       currInterval = nextInterval;
     }
-    nextInterval = intervals[i+1] || [Infinity, Infinity];
+    nextInterval = intervals[i+1];
+    if(nextInterval) {
+      nextInterval = nextInterval.slice();
+    } else {
+      nextInterval = [Infinity, Infinity];
+    }
   }
   
   return results;

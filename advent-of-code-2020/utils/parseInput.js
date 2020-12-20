@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function parseInput(fileName, iterator) {
+function parseInput(fileName, iterator = (x) => x) {
   return new Promise((resolve, reject) => {
     fs.readFile(path.resolve(__dirname, "..", fileName), (error, data) => {
       if (error) {

@@ -16,5 +16,5 @@ var simplifyPath = function(path) {
       else if(dir === PARENT_DIRECTORY) canonicalPath.pop();
       else canonicalPath.push(dir);
     })
-  return '/' + canonicalPath.filter(dir => !!dir).join('/');
+  return '/' + canonicalPath.join('/');
 };

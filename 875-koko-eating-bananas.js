@@ -33,7 +33,6 @@ var minEatingSpeed = function(piles, h) {
   if(!piles || !piles.length || !h) return null;
   
   // get biggest pile value by sorting (nvm, don't need to sort)
-  // take highest one
   // binary search, and see if valid hours
   // continue binary search
   let minRate = 1;
